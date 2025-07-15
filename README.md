@@ -1,1 +1,1 @@
-# Leraning 2025
+# Learning 2025
