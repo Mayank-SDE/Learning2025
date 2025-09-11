@@ -41,4 +41,44 @@
         - Inside the new execution context again there will be two phases involves one is creation phase and the second one is code execution phase.
         - All the variables and functions inside this function will be allocated memory in the execution context. 
         - For example the variable num and ans will be allocated memory in the execution context of square2() function call.
-        
+        - and then the evaluated or result value will come into the memory section square2 will be assigned the result value.
+
+        ![JS-Execution-Context](image.png)
+        -  For every function calling a brand new execution context is created which will again have code component and memory section as well.
+        - Now all the local scope variables of the function will get the memory in the memory section. And the variables num and ans will be assigned the value as undefined in the initial phase.  
+        - In the second phase code execution phase, the num will be assigned the value as 4.
+        - ans will be assigned 16 as value in the code execution phase.
+        - The return statement will take back the control to the line where the function is called and the corresponding variable value will get changed to the ans.
+        - When the js is done with the execution then the execution context will also get released and cleared.
+    ### Summary :-
+     - There are two phases one is code execution phase and the other one is initial phase and in the initial phase all the variables will be assigned the undefined value and the functions will be assigned the whole function code itself.
+     - in code execution phase, all the code written inside the function will be executed line by line. And all the variables will be assigned the actual value mentioned inside the code and if there are expression then those expression will be evaluated to a certain value.
+     - Let suppose if there is function call inside the function then separate execution context containing two components memory and code will be created separately.
+     - Execution context will always be created inside the code section of the parent execution context.
+     - All of these is managed using the Stack which is also called as call Stack.
+     ### Call Stack 
+      - Call stack is a stack which has the global execution context. Whenever any JavaScript program is run this call stack with global context is populated.
+      - Whole execution context is pushed inside its stack. Whenever a function is invoked then that function invocation will result in creation of execution context and that execution context will get push into the call stack. Whenever any execution context finishes the execution then execution is removed from the call stack and the control is again shifted to the execution context just below it in the call stack and ultimately it gives the control to the global execution context.
+      - This call stack is only for managing the execution context.
+      - At the end the call stack is empty and even the global execution context also vanishes.
+      - Call stack maintain the order of execution of execution context. 
+      - There are many call stacks names which are popular -
+        1. Execution Context Stack
+        2. Program Stack
+        3. Control Stack
+        4. Runtime Stack
+        5. Machine Stack
+## Hoisting in JavaScript ?
+  - ![without-hosting-normal-js-code](image-1.png)
+  - ![hosting-js-code-concept](image-2.png)
+  - ![var-x-is-not-defined](image-3.png)
+  - ![function-output-itself](image-4.png)
+  ### Initial Phase effect 
+  - When we are printing the variable without before the declaration then it is printing undefined.
+  - When we are printing the function, before its definition it is printing the whole function itself.
+  - This happens because even before the code starts executing the memory is allocated to each and every functions, variables.
+  - ![before-js-code-execution](image-5.png)
+  - variable x is already been allocated the memory, even before the js code starts executing. 
+  - JS has special keyword undefined for allocating it to the variables which are not been executed yet in the initial phase.
+  - Similarly, for the function in the initial phase it gets the value as actual copy of the function.
+  - ![before-execution-function-value](image-6.png)
