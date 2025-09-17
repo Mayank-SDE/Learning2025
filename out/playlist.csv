@@ -1,0 +1,12 @@
+videoId,title,channel,publishedAt,seconds,hms
+dX-3R2TH5qE,RabbitMQ + Nodejs playlist #1: Complete RabbitMQ Explained | FREE course | 1st time on Youtube,Code Architecture,2024-06-17T20:47:50Z,595,00:09:55
+bJhdt7VJ20A,"RabbitMQ series #2 | Message Brokers, Queues, Exchanges, Binding & Routing keys Explained | Nodejs",Code Architecture,2024-06-18T21:32:50Z,989,00:16:29
+qN85tXRP4bk,RabbitMQ with Nodejs #3 | Install & Setup RabbitMQ using Docker | Understanding Containers & Images,Code Architecture,2024-06-20T08:05:05Z,776,00:12:56
+PLwQ3tv9N5Q,"RabbitMQ with Nodejs #4 | Code implementation | Producer, Consumer, Exchange, Binding & Routing key",Code Architecture,2024-06-21T11:49:09Z,1510,00:25:10
+R_1rexk0Q9w,"RabbitMQ with Nodejs #5 | Implementing multiple Consumer, Exchange, Binding & Routing key | Advance",Code Architecture,2024-06-23T08:08:36Z,773,00:12:53
+e_-PoCmyrqs,RabbitMQ with Nodejs #6 | Topic Exchange Explained | Real-World Notification Service Implementation,Code Architecture,2024-06-25T18:23:27Z,1712,00:28:32
+8SldUxLW2vs,RabbitMQ with Nodejs #7 | Fanout Exchange Explained | Real-World Notification Service Implementation,Code Architecture,2024-06-28T03:30:07Z,891,00:14:51
+NMi-zt3QLa0,RabbitMQ with Nodejs #8 | Header Exchange Explained | All & Any code Implementation | Real World eg,Code Architecture,2024-06-30T00:30:11Z,2091,00:34:51
+CR4CvumFEgM,RabbitMQ with Nodejs #9 | Priority Queue Explained with code Implementation |  (#rabbitmq #nodejs),Code Architecture,2024-07-01T08:15:56Z,643,00:10:43
+YP3mrwktU7g,RabbitMQ with Nodejs #10 | What is Delayed Queue | x-delay | x-delayed-message | (#rabbitmq #nodejs),Code Architecture,2024-07-08T18:51:49Z,2282,00:38:02
+1eyMlbD0ZXw,RabbitMQ with Nodejs #11 | What is Lazy Queue | core working | Interview ready | (#rabbitmq #nodejs),Code Architecture,2024-07-13T15:20:56Z,1414,00:23:34
