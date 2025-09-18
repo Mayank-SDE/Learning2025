@@ -82,3 +82,13 @@
   - JS has special keyword undefined for allocating it to the variables which are not been executed yet in the initial phase.
   - Similarly, for the function in the initial phase it gets the value as actual copy of the function.
   - ![before-execution-function-value](image-6.png)
+  - Even before the code starts executing the memory is allocated to each and every function and variables.
+  - All the variables will be assigned the value undefined and all the function will be assigned the function body itself.
+  You must declare the variable before using it otherwise it will give you the reference error.
+  - Similarly if you are calling the function before the declaring it and creating that function normally then it will get executed and works fine.
+  - However, if you are using the arrow function it will behave like an normal variable that will be assigned undefined not the function body in the memory allocation phase.
+  - Thus, calling the arrow function before code execution will give you error.
+  ![calling-arrow-function-before-execution](image-7.png)
+  - Even if you are not using the arrow function and using the variable to assign the function, it will just behave like a variable.
+  
+
