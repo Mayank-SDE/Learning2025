@@ -1,0 +1,41 @@
+# ---- Build stage ----
+FROM node:20-alpine AS build
+WORKDIR /app
+
+# Install deps
+COPY package.json package-lock.json* ./
+RUN npm ci
+
+# Build
+COPY . .
+# Ensure Vite uses base API URL from env (we'll pass it in compose)
+# Vite reads VITE_* at build time
+ARG VITE_API_URL
+ENV VITE_API_URL=${VITE_API_URL}
+RUN npm run build
+
+# ---- Runtime stage (nginx) ----
+FROM nginx:1.27-alpine
+WORKDIR /usr/share/nginx/html
+
+# Copy static build
+COPY --from=build /app/dist ./
+
+# SPA fallback so client-side routing works
+COPY <<'NGINX' /etc/nginx/conf.d/default.conf
+server {
+  listen 80;
+  server_name _;
+  root /usr/share/nginx/html;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+
+  # OPTIONAL: allow large asset downloads if you preview GLBs directly
+  client_max_body_size 50m;
+}
+NGINX
+
+# Healthcheck (simple)
+HEALTHCHECK --interval=10s --timeout=3s --retries=10 CMD wget -qO- http://localhost/ >/dev/null || exit 1
